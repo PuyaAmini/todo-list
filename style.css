@@ -61,3 +61,10 @@ img.delete {
   right: 4%;
   cursor: pointer;
 }
+.filtered {
+  display: none;
+}
+
+/* 
+responsiveness??
+*/

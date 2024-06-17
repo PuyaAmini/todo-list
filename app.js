@@ -20,8 +20,27 @@ addForm.addEventListener("submit", (e) => {
 });
 
 //delete todos:
-list.addEventListener('click' , e =>{
-       if(e.target.classList.contains('delete')){
-              e.target.parentElement.remove()
-       }
-})
+list.addEventListener("click", (e) => {
+  if (e.target.classList.contains("delete")) {
+    e.target.parentElement.remove();
+  }
+});
+
+// search and filter:
+const filterTodos = (term) => {
+  Array.from(list.children)
+    .filter((todo) => !todo.textContent.toLocaleLowerCase().includes(term))
+    .forEach((todo) => todo.classList.add("filtered"));
+
+  Array.from(list.children)
+    .filter((todo) => todo.textContent.toLocaleLowerCase().includes(term))
+    .forEach((todo) => todo.classList.remove("filtered"));
+};
+search.addEventListener("keyup", () => {
+  const term = search.value.toLocaleLowerCase().trim();
+  filterTodos(term);
+});
+
+// next issue :
+// just show the results of search
+//when submit search
