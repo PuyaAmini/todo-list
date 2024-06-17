@@ -1,12 +1,45 @@
 <html lang="en">
-<head>
-       <meta charset="UTF-8">
-       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <title>Document</title>
-       <link rel="stylesheet" href="style.css">
-</head>
-<body>
-       
-</body>
-<script src="./app.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>ToDo List</h1>
+        <form class="search">
+          <input type="text" placeholder="search todos" />
+        </form>
+      </header>
+
+      <ul class="todos">
+        <li>
+          <span>do someThing</span>
+          <img class="delete" src="./src/delete.png" alt="delete" />
+        </li>
+        <li>
+          <span>clean dishes</span>
+          <img class="delete" src="./src/delete.png" alt="delete" />
+        </li>
+        <li>
+          <span>try to be better</span>
+          <img class="delete" src="./src/delete.png" alt="delete" />
+        </li>
+        <li>
+          <span>buy new blue pen</span>
+          <img class="delete" src="./src/delete.png" alt="delete" />
+        </li>
+      </ul>
+
+      <form class="add">
+        <label>add new todo:</label>
+        <br />
+        <input type="text" placeholder="type the new todo" />
+      </form>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
 </html>
